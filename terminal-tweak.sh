@@ -26,9 +26,9 @@ if [ "$?" = "1" ]
 	then exit
 fi
 
-change=` cat term.txt | awk '{print $1;}' `
-shell=` cat term.txt | awk '{print $2;}' `
-omz=` cat term.txt | awk '{print $3;}' `
+change=` cat .term.txt | awk '{print $1;}' `
+shell=` cat .term.txt | awk '{print $2;}' `
+omz=` cat .term.txt | awk '{print $3;}' `
 
 }
 
