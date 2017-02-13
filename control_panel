@@ -131,11 +131,6 @@ class MyWindow(Gtk.Window):
         self.powerbutton = Gtk.Button(label="Power Manager", image=icon10)
         self.powerbutton.set_image_position(2)
         self.powerbutton.connect("clicked", self.power)
-        icon11 = Gtk.Image()
-        icon11.set_from_icon_name('qxkb', Gtk.IconSize.DIALOG)
-        self.qxkbbutton = Gtk.Button('Keyboard Settings', image=icon11)
-        self.qxkbbutton.set_image_position(2)
-        self.qxkbbutton.connect("clicked", self.qxkb)
         icon12 = Gtk.Image()
         icon12.set_from_icon_name('preferences-system', Gtk.IconSize.DIALOG)
         self.autostartbutton = Gtk.Button(label="Autostart", image=icon12)
@@ -165,7 +160,6 @@ class MyWindow(Gtk.Window):
         self.sys_box1.pack_start(self.printbutton, True, True, 0)
         self.sys_box1.pack_start(self.obkeybutton, True, True, 0)
         self.sys_box3.pack_start(self.powerbutton, True, True, 0)
-        self.sys_box3.pack_start(self.qxkbbutton, True, True, 0)
         self.sys_box2.pack_start(self.autostartbutton, True, True, 0)
         self.sys_box2.pack_start(self.autostartbutton, True, True, 0)
         self.sys_box2.pack_start(self.parabutton, True, True, 0)
@@ -339,9 +333,6 @@ class MyWindow(Gtk.Window):
 	    
     def power(self, widget):
         os.system("xfce4-power-manager-settings")
-	    
-    def qxkb(self, widget):
-        os.system("qxkb")
         
     def autostart(self, widget):
         os.system("autostart")
