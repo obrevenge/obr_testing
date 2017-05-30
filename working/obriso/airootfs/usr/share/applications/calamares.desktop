@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Install OBRevenge (Calamares)
+Comment=Installer for OBRevenge
+Categories=Utility;
+Exec=sudo calamares
+Icon=/usr/share/icons/calamares.png
