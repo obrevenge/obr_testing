@@ -1,0 +1,4 @@
+mount /dev/sda1 /mnt/ \n
+mount /dev/sda2 /mnt/home \n
+mount /dev/sda3 /mnt/boot \n
+mount /dev/sda4 /mntNA \n

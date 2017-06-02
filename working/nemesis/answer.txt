@@ -1,1 +1,1 @@
-TRUE Automatic Partioning 
+TRUE Manual Partitioning 
