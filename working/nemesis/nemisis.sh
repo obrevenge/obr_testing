@@ -2,13 +2,13 @@
 
 title="Nemesis Installer"
 
-yad --plug=12347 --tabnum=1 --text="<big>Welcome to the Nemesis Installer</big>\nThank you for Choosing a Revenge OS System" --form --field=" ":LBL --image="obr-logo-sm.png" --image-on-top --field="Click on the Next Tab to Get Started":LBL > /dev/null &
+yad --plug=12348 --tabnum=1 --text="<big>Welcome to the Nemesis Installer</big>\nThank you for Choosing a Revenge OS System" --form --field=" ":LBL --image="obr-logo-sm.png" --image-on-top --field="Click on the Next Tab to Get Started":LBL > /dev/null &
 
                                                    
-yad --plug=12347 --tabnum=2 --text="Partitions" --text="<big>Partitioning</big>\n\nHow Would You Like to Partition Your Disk?\nAuto Partitioning will delete everything\non the disk and install Revenge OS\n\nManual Partitioning will allow you\nto create and edit partitions and choose where\nto install Revenge OS" --image="obr-logo-sm.png" --image-on-top --radiolist --list --column="Select" --column="Type" false "Automatic Partioning" false "Manual Partitioning" --separator=" " > answer.txt &    
+yad --plug=12348 --tabnum=2 --text="Partitions" --text="<big>Partitioning</big>\n\nHow Would You Like to Partition Your Disk? Auto Partitioning will delete everything on the disk and install Revenge OS\n\nManual Partitioning will allow you to create and edit partitions and choose where to install Revenge OS\n\nReplacing a Partition will format that single partition and install Revenge OS on that partition" --image="obr-logo-sm.png" --radiolist --list --column="Select" --column="Type" false "Automatic Partioning" false "Manual Partitioning" false "Replace Partition" --separator=" " > answer.txt &    
 
 
-yad --width=600 --height=500 --title="$title" --notebook --key=12347 --tab="Welcome" --tab="Partitioning"
+yad --width=600 --title="$title" --notebook --key=12348 --tab="Welcome" --tab="Partitioning"
 
 part=` cat answer.txt | awk '{print $2;}' `
 
