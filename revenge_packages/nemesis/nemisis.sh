@@ -114,7 +114,7 @@ desktop() {
 }
 
 confirm() {
-    yad --width=600 --height=400 --center --info --title="$title" --image="$logo" --text="You have chosen the following:\n\n$part partitioning\n\nkeyboard layout: $key\n\nTimezone: $zone $subzone\n\nHostname: $hname\n\nUsername: $username\n\nClock configuration: $clock\n\nDesktop: $desktop"
+    yad --width=600 --center --info --title="$title" --image="$logo" --text="You have chosen the following:\n\n$part partitioning\n\nKeyboard layout: $key\n\nTimezone: $zone $subzone\n\nHostname: $hname\n\nUsername: $username\n\nClock configuration: $clock\n\nDesktop: $desktop\n\nIf the above options are correct, click OK.\nIf you need to make changes, click 'cancel'\nto start over."
     
 }
 
