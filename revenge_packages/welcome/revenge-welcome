@@ -19,10 +19,10 @@ class Base:
         os.system("pamac-updater")
 
     def install(self, widget):
-        os.system("obsoftwareinstall2.py")
+        os.system("revenge-softwareinstall2.py")
     
-    def read(self, widget):
-        os.system("mate-user-guide;gnome-help")
+    def issues(self, widget):
+        os.system("xdg-open https://github.com/obrevenge/obrevenge-iso/issues")
     
     def readonline(self, widget):
         os.system("xdg-open https://obrevenge.freeforums.org")
@@ -50,11 +50,11 @@ class Base:
 
 
 # Making Images
-        self.pix = gtk.gdk.pixbuf_new_from_file_at_size("revenge_logo.png", 200, 160)
+        self.pix = gtk.gdk.pixbuf_new_from_file_at_size("/usr/share/Icons/revenge_logo.png", 200, 160)
         self.image = gtk.Image()
         self.image.set_from_pixbuf(self.pix)
 
-        self.pix1 = gtk.gdk.pixbuf_new_from_file_at_size("revenge_banner.png", 800, 200)
+        self.pix1 = gtk.gdk.pixbuf_new_from_file_at_size("/usr/share/Icons/revenge_banner.png", 800, 200)
         self.image1 = gtk.Image()
         self.image1.set_from_pixbuf(self.pix1)
 
@@ -63,8 +63,8 @@ class Base:
         self.updatebutton.connect("clicked", self.update)
         self.installbutton = gtk.Button("Software Installation Tool")
         self.installbutton.connect("clicked", self.install)
-        self.readbutton = gtk.Button("Offline User Guide")
-        self.readbutton.connect("clicked", self.read)
+        self.readbutton = gtk.Button("Report Issues")
+        self.readbutton.connect("clicked", self.issues)
         self.readonbutton = gtk.Button("Forums")
         self.readonbutton.connect("clicked", self.readonline)
         self.googlebutton = gtk.Button("Join G+ Community")
