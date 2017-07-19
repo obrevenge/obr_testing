@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This is a tool to change the kernel on an Arch Linux System. The kernel choices include
-# the current linux kernel, linus-lts, linux-grsec, and linux-zen
+# the current linux kernel, linus-lts, linux-hardened, and linux-zen
 
 # Written by Jody James for OBRevenge OS
 
@@ -39,9 +39,8 @@ if [ "$kernel" = "" ]
 fi
 
 # removing old kernel
-(echo "# Removing $current kernel..."
+(echo "# Preparing..."
 pacman -Rdd --noconfirm os-prober
-pacman -Rdd --noconfirm $current
 
 # installing selected kernel
 echo "# Installing $kernel kernel..."
